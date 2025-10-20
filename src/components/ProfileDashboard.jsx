@@ -43,7 +43,7 @@ export const ProfileDashboard = ({isSignedIn}) => {
 
 
     const copyLink = () => {
-    navigator.clipboard.writeText(sharableLink)
+    navigator.clipboard.writeText(`link-sphere-pink.vercel.app${sharableLink}`)
       .then(() => alert("Link copied to clipboard!"))
       .catch(err => console.error("Failed to copy: ", err));
   };
@@ -76,7 +76,7 @@ export const ProfileDashboard = ({isSignedIn}) => {
                 console.log(newDocRef);
                 // const navigate = useNavigate();
                 setISubmitting(true);
-                setSharableLink(`link-sphere-hfzt.vercel.app/profile/${newDocRef.id}`)
+                setSharableLink(`/profile/${newDocRef.id}`);
                 // navigate(`/profile/${newDocRef.id}`);
 
 
