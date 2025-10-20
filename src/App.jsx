@@ -32,7 +32,7 @@ function App() {
       }
     }
 
-    const showheader = !location.pathname.startsWith('/profile/');
+    const showheader = !location.pathname.startsWith('/LinkSphere/profile/');
 
   return (
     <>
