@@ -43,7 +43,8 @@ export const ProfileDashboard = ({isSignedIn}) => {
 
 
     const copyLink = () => {
-    navigator.clipboard.writeText(`link-sphere-pink.vercel.app${sharableLink}`)
+        console.log(window.location.href.split('/'));
+    navigator.clipboard.writeText(`${window.location.href.split('/')[2]}${sharableLink}`)
       .then(() => alert("Link copied to clipboard!"))
       .catch(err => console.error("Failed to copy: ", err));
   };
