@@ -76,7 +76,7 @@ export const ProfileDashboard = ({isSignedIn}) => {
                 console.log(newDocRef);
                 // const navigate = useNavigate();
                 setISubmitting(true);
-                setSharableLink(`http://localhost:5173/LinkSphere/profile/${newDocRef.id}`)
+                setSharableLink(`/profile/${newDocRef.id}`)
                 // navigate(`/profile/${newDocRef.id}`);
 
 
