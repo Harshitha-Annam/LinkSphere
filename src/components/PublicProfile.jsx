@@ -37,13 +37,13 @@ export const PublicProfile = () => {
             <div className="public-profile">
                 <h2 className="public-profile-h2" style={{textAlign:"center"}}>LinkSphere Profile</h2>
                 <div className="user-header">
-                    <img src="user.svg" height={"120px"} width={"120px"} />
+                    <img src="/user.svg" height={"120px"} width={"120px"} />
                     <div className="user-name-bio"><h3>{publicProfile.userName}</h3>
                     <p>{publicProfile.userBio}</p></div>
                 </div>
                 {
                     Object.keys(publicProfile).filter((key) => (key !== 'userId' && key !== 'userName' && key !== 'userBio') ).map((key) => {
-                        return <><div key={key}><img src={`${key}.svg`} height={"50px"} width={"50px"} /><a href={publicProfile[key]} target="_blank">{'Find me on ' +key  }</a></div></>
+                        return <><div key={key}><img src={`/${key}.svg`} height={"50px"} width={"50px"} /><a href={publicProfile[key]} target="_blank">{'Find me on ' +key  }</a></div></>
                     })
                 }
             </div>
