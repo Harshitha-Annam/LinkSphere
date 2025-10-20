@@ -76,7 +76,7 @@ export const ProfileDashboard = ({isSignedIn}) => {
                 console.log(newDocRef);
                 // const navigate = useNavigate();
                 setISubmitting(true);
-                setSharableLink(`/profile/${newDocRef.id}`)
+                setSharableLink(`link-sphere-hfzt.vercel.app/profile/${newDocRef.id}`)
                 // navigate(`/profile/${newDocRef.id}`);
 
 
