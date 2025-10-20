@@ -6,7 +6,7 @@ import { useNavigate, Link } from "react-router";
 
 
 console.log(auth?.currentUser?.uid);
-export const Auth = () => {
+export const Auth = ({setIsSignedIn}) => {
     // state variables required for sign in
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -19,7 +19,7 @@ export const Auth = () => {
             setEmail('');
             setPassword('');
             console.log('Signed In Successfully with email: ', auth.currentUser.email);
-            
+            setIsSignedIn(true);
             navigate('/dashboard');
         }
         catch(err)

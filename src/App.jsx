@@ -32,7 +32,7 @@ function App() {
       }
     }
 
-    const showheader = !location.pathname.startsWith('/LinkSphere/profile/');
+    const showheader = !location.pathname.startsWith('/profile/');
 
   return (
     <>
@@ -57,7 +57,7 @@ function App() {
       }
         <Routes>
           <Route path='/' element= {<HomePage/>} />
-          <Route path='/signup' element= {<Auth/>} />
+          <Route path='/signup' element= {<Auth setIsSignedIn={setIsSignedIn}/>} />
           <Route path='/login' element= {<LogIn setIsSignedIn={setIsSignedIn}/>} />
           <Route path='/dashboard' element= {<ProfileDashboard isSignedIn={isSignedIn}/>} />
           <Route path='/profile/:uniqueId' element = {<PublicProfile />} />
